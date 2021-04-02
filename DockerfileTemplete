@@ -10,4 +10,4 @@ ENV PGADMIN_CONFIG_MAIL_PASSWORD="'${MAIL_PASSWORD}'"
 
 COPY servers.json /pgadmin4/servers.json
 
-EXPOSE 5050
+EXPOSE 80 443
