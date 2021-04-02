@@ -1,0 +1,36 @@
+{
+  "executionRoleArn": "arn:aws:iam::335722167938:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "${AWS_LOG_GROUP}",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "portMappings": [
+        {
+          "hostPort": $PORT,
+          "protocol": "tcp",
+          "containerPort": $PORT
+        }
+      ],
+      "environment": [],
+      "memory": $MEMORY,
+      "memoryReservation": $MEMORY_RESERVATION,
+      "image": "${AWS_ECR_REPOSITORY}:${QRBUILD_VERSION}",
+      "name": "qrpoint-pgadmin",
+      "essential": true
+    }
+  ],
+  "memory": "$MEMORY",
+  "taskRoleArn": "arn:aws:iam::335722167938:role/ecsTaskExecutionRole",
+  "family": "qrpoint-pgadmin",
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "networkMode": "awsvpc",
+  "cpu": "${CPU}"
+}
