@@ -1,0 +1,40 @@
+{
+    "Servers": {
+        "1": {
+            "Name": "qrpoint-prod",
+            "Group": "QRPointProd",
+            "Host": "qrpoint-prod-aurora-cluster-cluster.cluster-c0qyibtfmvds.us-east-1.rds.amazonaws.com",
+            "Port": 5432,
+            "Username": "postgres",
+            "MaintenanceDB": "postgres",
+            "SSLMode":"prefer"
+        },
+        "2": {
+            "Name": "qrpoint-stage",
+            "Group": "QRPointStage",
+            "Host": "qrpoint-stage.c0qyibtfmvds.us-east-1.rds.amazonaws.com",
+            "Port": 5432,
+            "Username": "postgres",
+            "MaintenanceDB": "postgres",
+            "SSLMode":"prefer"
+        },
+        "3": {
+            "Name": "qrpoint-test",
+            "Group": "QRPointTest",
+            "Host": "qrpoint-test.c0qyibtfmvds.us-east-1.rds.amazonaws.com",
+            "Port": 5432,
+            "Username": "postgres",
+            "MaintenanceDB": "postgres",
+            "SSLMode":"prefer"
+        },
+        "4": {
+            "Name": "qrpoint-dev",
+            "Group": "QRPointDev",
+            "Host": "qrpoint-develop.c3vmk8vasbsf.sa-east-1.rds.amazonaws.com",
+            "Port": 5432,
+            "Username": "postgres",
+            "MaintenanceDB": "postgres",
+            "SSLMode":"prefer"
+        }
+    }
+}
